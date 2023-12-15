@@ -1,0 +1,22 @@
+.product-img img{
+    width: 328px;
+    height: 236px;
+    object-fit: contain;
+}
+.product-text h3{
+    font-size: 18px !important;
+}
+.single-service-style2{
+    width: 350px;
+}
+.product-enquiry{
+background-color: transparent !important;
+}
+.product-enquiry-form input{
+    border: 1px solid #000 !important;
+}
+.product-enquiry form input[type="text"],
+.product-enquiry form input[type="email"] {
+    height: 50px !important;
+    padding-left: 10px !important;
+}

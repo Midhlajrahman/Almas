@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'Laila';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/laila/v15/LYjBdG_8nE8jDLzxogNA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Laila';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/laila/v15/LYjMdG_8nE8jDIRd.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Laila';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/laila/v15/LYjBdG_8nE8jDLypowNA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Laila';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/laila/v15/LYjBdG_8nE8jDLyFpANA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Laila';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/laila/v15/LYjBdG_8nE8jDLzhpQNA.ttf) format('truetype');
+}

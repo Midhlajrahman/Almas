@@ -1,0 +1,171 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+<!--Start breadcrumb area paroller-->     
+<section class="breadcrumb-area">
+    <div class="breadcrumb-area-bg" style="background-image: url({% static 'web/images/breadcrumb/breadcrumb-1.jpg' %});"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content text-center">
+                    <div class="title">
+                       <h2>Service Details</h2>
+                    </div>
+                    <div class="breadcrumb-menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                            <li class="active">Service Details</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+
+<!--Start Service Details Area-->
+<section class="service-details-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 col-lg-5 order-box-2">
+                <div class="thm-sidebar-box">
+                    <div class="view-all-service">
+                        <div class="sidebar-title">
+                            <h3>Services</h3>
+                            <div class="decor">
+                                <img src="{% static 'web/images/shape/decor.png' %}" alt="">
+                            </div>
+                        </div>
+                        <ul class="service-pages">
+                            {% for other in other_products %}
+                            <li><a href="{{other.get_absolute_url}}">{{other.name|truncatechars:20|safe}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-contact-info-box">
+                    
+                        <div class="contact-form-box1 contact-form-box1--style2 product-enquiry">
+                            <div class="sec-title">
+                                <div class="sub-title">
+                                    <h5>Enquiry Now</h5>
+                                </div>
+        
+                            </div>
+                            <form id="contact-form" name="contact_form" class="default-form1 product-enquiry-form" action="#" method="post">
+                                {% csrf_token %}
+                                <div class="input-box">
+                                    <input type="text" name="form_name" value="{{product.name}}" readonly>
+                                </div>
+                                <div class="input-box">
+                                    {{form.name}}
+                                </div>
+                                <div class="input-box">
+                                    {{form.email}}
+                                </div>
+                                <div class="input-box">
+                                    {{form.phone}}
+                                </div>
+                                <div class="button-box">
+                                    <button class="btn-one" type="submit" data-loading-text="Please wait...">
+                                        <span class="round"></span>
+                                        <span class="txt">Submit</span>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-xl-8 col-lg-7 order-box-1">
+                <div class="service-details-content">
+                    <div class="top">
+                        <h2>{{product.name}}</h2>
+                        <div class="img-box">
+                            <img src="{{product.image.url}}" alt="">
+                        </div>
+                    </div>
+                    <div class="service-details-text-box1">
+                        <h3>{{product.name}}</h3>
+                        <p>{{product.description}}
+                        </p>   
+                    </div>
+
+
+                    <div class="why-our-service">
+                        <div class="title">
+                            <h2>Why Our Service</h2>
+                            <p>Business it will frequently occur pleasures have to repudiated annoyances that accepted wises
+                                man therefore always hold the saying through shrinking.</p>
+                        </div>
+                        <div class="row">
+                            <!--Start Why Service Block-->
+                            <div class="col-xl-4">
+                                <div class="why-service-block text-center">
+                                    <div class="icon-holder">
+                                        <div class="icon-bg" style="background-image: url({% static 'web/images/shape/why-service-icon-bg.png' %});"></div>
+                                        <div class="icon-bg-overlay" style="background-image: url({% static 'web/images/shape/why-service-icon-overlay-bg.png' %});"></div>
+                                        <span class="icon-water-drop-1"></span>
+                                    </div> 
+                                    <div class="title">
+                                        <h3><a href="#">High Quality</a></h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Take trivial example which every under labo physical some.</p>
+                                    </div>   
+                                </div>
+                            </div>
+                            <!--End Why Service Block-->
+                            <!--Start Why Service Block-->
+                            <div class="col-xl-4">
+                                <div class="why-service-block text-center">
+                                    <div class="icon-holder">
+                                        <div class="icon-bg" style="background-image: url({% static 'web/images/shape/why-service-icon-bg.png' %});"></div>
+                                        <div class="icon-bg-overlay" style="background-image: url({% static 'web/images/shape/why-service-icon-overlay-bg.png' %});"></div>
+                                        <span class="icon-truck"></span>
+                                    </div> 
+                                    <div class="title">
+                                        <h3><a href="#">Fast Delivery</a></h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Equal blame belongs those who fail their duty through weaknes.</p>
+                                    </div>   
+                                </div>
+                            </div>
+                            <!--End Why Service Block-->
+                            <!--Start Why Service Block-->
+                            <div class="col-xl-4">
+                                <div class="why-service-block text-center">
+                                    <div class="icon-holder">
+                                        <div class="icon-bg" style="background-image: url({% static 'web/images/shape/why-service-icon-bg.png' %});"></div>
+                                        <div class="icon-bg-overlay" style="background-image: url({% static 'web/images/shape/why-service-icon-overlay-bg.png' %});"></div>
+                                        <span class="icon-hand"></span>
+                                    </div> 
+                                    <div class="title">
+                                        <h3><a href="#">Affordable</a></h3>
+                                    </div>
+                                    <div class="text">
+                                        <p>Right indignation at dislike men who beguil charm blinded.</p>
+                                    </div>   
+                                </div>
+                            </div>
+                            <!--End Why Service Block-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--End Service Details Area-->
+
+{% endblock %}
