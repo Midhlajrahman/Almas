@@ -15,7 +15,7 @@
                             </div>
                             <div class="breadcrumb-menu">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="{% url 'web:index' %}">Home</a></li>
                                     <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
                                     <li class="active">About Company</li>
                                 </ul>
@@ -31,96 +31,40 @@
         <section class="about-style3-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-xl-12">
-                        <div class="about-style3-top">
+                    <div class="col-xl-12 about_section" >
+                        {% comment %} <div class="about-style3-top">
                             <img src="{% static 'web/images/about/about-style3.jpg' %}" alt="">
-                        </div>
+                        </div> {% endcomment %}
                         <div class="about-style3-content">
                             <div class="row">
-                                <div class="col-xl-6">
+                                <div class="col-xl-6" style=" flex: 5 0 50% !important; max-width: 120% !important;">
                                     <div class="about-style3-text-box1">
                                         <div class="sec-title">
                                             <div class="sub-title">
                                                 <h5>About Company</h5>
                                             </div>
-                                            <h2>Spring water <br> home businesses</h2>
+                                            <h2>Spring water home businesses</h2>
                                             <div class="decor">
                                                 <img src="{% static 'web/images/shape/decor.png' %}" alt="">
                                             </div>
                                         </div>
 
                                         <div class="inner-content">
-                                            <h5>100% USA owned &amp; operated</h5>
                                             <div class="text">
-                                                <p>Denouncing pleasure and praising pain was born and I will give you a
-                                                    complete account of the system and expound the actual teachings the
-                                                    great explorer of the truth, the master-builder.</p>
-                                            </div>
-                                            <div class="bottom-box">
-                                                <div class="signature">
-                                                    <img src="{% static 'web/images/resources/signature.png' %}" alt="">
-                                                </div>
-                                                <div class="name">
-                                                    <h5>Max Benjamin</h5>
-                                                    <span>Founder</span>
-                                                </div>
+                                                <p>Almas is pleased to be your trusted provider of premium water solutions in the heart of Qatar. We take pride in our 5-gallon water bottles, which are carefully crafted to showcase our commitment to excellence by providing only the purest and highest quality water. Our water undergoes rigorous testing to ensure its chemical integrity, making it the ultimate source of reliable drinking water. With every sip, you can be assured of uncompromising freshness that is unmatched by any other water.</p>
+                            <p>At Almas, we are committed to providing optimal hydration solutions that cater to everyone's preferences. We introduce our Hot and Cold Water Dispenser, an adaptable companion that is designed to meet the diverse needs of both residential and commercial spaces. With this dispenser, you can enjoy the convenience of instant access to your preferred temperature, whether it's a balanced warm drink or a chilled one. At Almas, we act as your trusted partner in making you robust and healthy by extending pure water for homes and businesses across Qatar.</p>
+
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div class="col-xl-6">
-                                    <div class="about-style3-text-box2">
-                                        <ul>
-                                            <li>
-                                                <div class="inner">
-                                                    <div class="img-box">
-                                                        <div class="img-inner">
-                                                            <img src="{% static 'web/images/resources/our-story.jpg' %}" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-box">
-                                                        <h3>Our Story</h3>
-                                                        <p>Expound the actual teaching the great explorers the truth
-                                                            masters human happiness rejects.</p>
-                                                        <div class="btns-box">
-                                                            <a class="btn-two" href="#"><span
-                                                                    class="icon-right-arrow"></span>Read More</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="inner">
-                                                    <div class="img-box">
-                                                        <div class="img-inner">
-                                                            <img src="{% static 'web/images/resources/our-mission.jpg' %}" alt="">
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-box">
-                                                        <h3>What we do</h3>
-                                                        <p>Expound the actual teaching the great explorers the truth
-                                                            masters human happiness rejects.</p>
-                                                        <div class="btns-box">
-                                                            <a class="btn-two" href="#"><span
-                                                                    class="icon-right-arrow"></span>Read More</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </section>
         <!--End About Style3 Area-->
-
         <!--Start Fact Counter Area-->
         <section class="fact-counter-style3-area">
             <div class="container">
@@ -190,7 +134,6 @@
                                         <span class="icon-water-drop"></span>
                                         <div class="count-outer count-box">
                                             <span class="count-text" data-speed="3000" data-stop="45">0</span>
-                                            <span class="k">k</span>
                                         </div>
                                         <div class="title">
                                             <h6>Team Members</h6>
@@ -211,10 +154,10 @@
                                     <div class="outer-box">
                                         <span class="icon-water-drop"></span>
                                         <div class="count-outer count-box">
-                                            <span class="count-text" data-speed="3000" data-stop="27">0</span>
+                                            <span class="count-text" data-speed="3000" data-stop="760">0</span>
                                         </div>
                                         <div class="title">
-                                            <h6>Local Serving Areas</h6>
+                                            <h6>Happy Customers</h6>
                                         </div>
                                     </div>
                                 </li>
@@ -233,7 +176,7 @@
             <div class="container">
                 <div class="sec-title text-center">
                     <div class="sub-title">
-                        <h5>Why Aguapure</h5>
+                        <h5>Why Choose Almas</h5>
                     </div>
                     <h2>You’ll love fresh <br>taste of our natural water</h2>
                     <div class="decor">
@@ -244,7 +187,7 @@
                     <div class="col-xl-12">
                         <div class="choose-style3-content">
                             <div class="theme_carousel choose-carousel_1 owl-dot-style1 owl-theme owl-carousel"
-                                data-options='{"loop": true, "margin": 30, "autoheight":true, "lazyload":true, "nav": false, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 300, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "2" } , "992":{ "items" : "3" }, "1200":{ "items" : "4" }}}'>
+                                data-options='{"loop": true, "margin": 30, "autoheight":true, "lazyload":true, "nav": false, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1500, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "2" } , "992":{ "items" : "3" }, "1200":{ "items" : "4" }}}'>
 
                                 <!--Start Single Choose Box Style3-->
                                 <div class="single-choose-box-style3">
@@ -255,12 +198,8 @@
                                         </div>
                                         <div class="text">
                                             <h3>High Quality</h3>
-                                            <p>Take a trivial example which ever undertake...</p>
+                                            <p>Indulge in pure excellence with our crafted water.</p>
                                         </div>
-                                        <div class="button-boder"></div>
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                                 <!--End Single Choose Box Style3-->
@@ -273,12 +212,8 @@
                                         </div>
                                         <div class="text">
                                             <h3>Certified</h3>
-                                            <p>Righteous indignation dislike men who beguiled...</p>
+                                            <p>Rigorous certifications guarantee our commitment.</p>
                                         </div>
-                                        <div class="button-boder"></div>
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                                 <!--End Single Choose Box Style3-->
@@ -291,12 +226,8 @@
                                         </div>
                                         <div class="text">
                                             <h3>Reliable</h3>
-                                            <p>Equal blame belongs those who fail in their...</p>
+                                            <p>Uncompromising Freshness, Consistent Supply.</p>
                                         </div>
-                                        <div class="button-boder"></div>
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                                 <!--End Single Choose Box Style3-->
@@ -309,162 +240,11 @@
                                         </div>
                                         <div class="text">
                                             <h3>Affordable</h3>
-                                            <p>Take a trivial example which ever undertake.</p>
+                                            <p>Premium water solutions that won't break the bank</p>
                                         </div>
-                                        <div class="button-boder"></div>
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                                 <!--End Single Choose Box Style3-->
-
-                                <!--Start Single Choose Box Style3-->
-                                <div class="single-choose-box-style3">
-                                    <div class="inner text-center">
-                                        <div class="count-box">01</div>
-                                        <div class="icon">
-                                            <span class="icon-water-drop-1"></span>
-                                        </div>
-                                        <div class="text">
-                                            <h3>High Quality</h3>
-                                            <p>Take a trivial example which ever undertake...</p>
-                                        </div>
-                                        <div class="button-boder"></div>
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <!--End Single Choose Box Style3-->
-                                <!--Start Single Choose Box Style3-->
-                                <div class="single-choose-box-style3">
-                                    <div class="inner text-center">
-                                        <div class="count-box">02</div>
-                                        <div class="icon">
-                                            <span class="icon-medal"></span>
-                                        </div>
-                                        <div class="text">
-                                            <h3>Certified</h3>
-                                            <p>Righteous indignation dislike men who beguiled...</p>
-                                        </div>
-                                        <div class="button-boder"></div>
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <!--End Single Choose Box Style3-->
-                                <!--Start Single Choose Box Style3-->
-                                <div class="single-choose-box-style3">
-                                    <div class="inner text-center">
-                                        <div class="count-box">03</div>
-                                        <div class="icon">
-                                            <span class="icon-shield"></span>
-                                        </div>
-                                        <div class="text">
-                                            <h3>Reliable</h3>
-                                            <p>Equal blame belongs those who fail in their...</p>
-                                        </div>
-                                        <div class="button-boder"></div>
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <!--End Single Choose Box Style3-->
-                                <!--Start Single Choose Box Style3-->
-                                <div class="single-choose-box-style3">
-                                    <div class="inner text-center">
-                                        <div class="count-box">04</div>
-                                        <div class="icon">
-                                            <span class="icon-hand"></span>
-                                        </div>
-                                        <div class="text">
-                                            <h3>Affordable</h3>
-                                            <p>Take a trivial example which ever undertake.</p>
-                                        </div>
-                                        <div class="button-boder"></div>
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <!--End Single Choose Box Style3-->
-
-                                <!--Start Single Choose Box Style3-->
-                                <div class="single-choose-box-style3">
-                                    <div class="inner text-center">
-                                        <div class="count-box">01</div>
-                                        <div class="icon">
-                                            <span class="icon-water-drop-1"></span>
-                                        </div>
-                                        <div class="text">
-                                            <h3>High Quality</h3>
-                                            <p>Take a trivial example which ever undertake...</p>
-                                        </div>
-                                        <div class="button-boder"></div>
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <!--End Single Choose Box Style3-->
-                                <!--Start Single Choose Box Style3-->
-                                <div class="single-choose-box-style3">
-                                    <div class="inner text-center">
-                                        <div class="count-box">02</div>
-                                        <div class="icon">
-                                            <span class="icon-medal"></span>
-                                        </div>
-                                        <div class="text">
-                                            <h3>Certified</h3>
-                                            <p>Righteous indignation dislike men who beguiled...</p>
-                                        </div>
-                                        <div class="button-boder"></div>
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <!--End Single Choose Box Style3-->
-                                <!--Start Single Choose Box Style3-->
-                                <div class="single-choose-box-style3">
-                                    <div class="inner text-center">
-                                        <div class="count-box">03</div>
-                                        <div class="icon">
-                                            <span class="icon-shield"></span>
-                                        </div>
-                                        <div class="text">
-                                            <h3>Reliable</h3>
-                                            <p>Equal blame belongs those who fail in their...</p>
-                                        </div>
-                                        <div class="button-boder"></div>
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <!--End Single Choose Box Style3-->
-                                <!--Start Single Choose Box Style3-->
-                                <div class="single-choose-box-style3">
-                                    <div class="inner text-center">
-                                        <div class="count-box">04</div>
-                                        <div class="icon">
-                                            <span class="icon-hand"></span>
-                                        </div>
-                                        <div class="text">
-                                            <h3>Affordable</h3>
-                                            <p>Take a trivial example which ever undertake.</p>
-                                        </div>
-                                        <div class="button-boder"></div>
-                                    </div>
-                                    <div class="btn-box">
-                                        <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
-                                    </div>
-                                </div>
-                                <!--End Single Choose Box Style3-->
-
                             </div>
                         </div>
                     </div>
@@ -473,185 +253,7 @@
             </div>
         </section>
         <!--End Choose Style1 Area-->
-
-
-        <!--Start Team Style1 Area-->
-        <section class="team-style1-area">
-            <div class="team-style1-area-bg"
-                style="background-image: url({% static 'web/images/parallax-background/team-area-bg.jpg' %});"></div>
-            <div class="container">
-                <div class="team-style2_top">
-                    <div class="sec-title">
-                        <div class="sub-title">
-                            <h5>Team Members</h5>
-                        </div>
-                        <h2 class="clr_white">Team behind aguapure</h2>
-                        <div class="decor">
-                            <img src="{% static 'web/images/shape/decor.png' %}" alt="">
-                        </div>
-                    </div>
-                    <div class="btn-box">
-                        <a class="btn-one" href="shop.html">
-                            <div class="round"></div>
-                            <span class="txt">View All</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <!--Start Single Team Style1-->
-                    <div class="col-xl-3 col-lg-6 col-lg-6">
-                        <div class="single-team-style1 wow fadeInRight animated" data-wow-delay="00ms"
-                            data-wow-duration="1500ms">
-                            <div class="img-holder">
-                                <div class="inner">
-                                    <img src="{% static 'web/images/team/team-v1-1.jpg' %}" alt="" />
-                                    <div class="overlay-box"></div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="share-icon-border two"></div>
-                                    <div class="share-icon">
-                                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                        <div class="social-link-box">
-                                            <ul class="team-social-link">
-                                                <li>
-                                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="title-inner">
-                                        <div class="share-icon-border"></div>
-                                        <h5><a href="#">Baldwin Caleb</a></h5>
-                                        <p>Founder</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Team Style1-->
-                    <!--Start Single Team Style1-->
-                    <div class="col-xl-3 col-lg-6 col-lg-6">
-                        <div class="single-team-style1 wow fadeInRight animated" data-wow-delay="00ms"
-                            data-wow-duration="1500ms">
-                            <div class="img-holder">
-                                <div class="inner">
-                                    <img src="{% static 'web/images/team/team-v1-2.jpg' %}" alt="" />
-                                    <div class="overlay-box"></div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="share-icon-border two"></div>
-                                    <div class="share-icon">
-                                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                        <div class="social-link-box">
-                                            <ul class="team-social-link">
-                                                <li>
-                                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="title-inner">
-                                        <div class="share-icon-border"></div>
-                                        <h5><a href="#">Dale Harold</a></h5>
-                                        <p>Manager</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Team Style1-->
-                    <!--Start Single Team Style1-->
-                    <div class="col-xl-3 col-lg-6 col-lg-6">
-                        <div class="single-team-style1 wow fadeInRight animated" data-wow-delay="00ms"
-                            data-wow-duration="1500ms">
-                            <div class="img-holder">
-                                <div class="inner">
-                                    <img src="{% static 'web/images/team/team-v1-3.jpg' %}" alt="" />
-                                    <div class="overlay-box"></div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="share-icon-border two"></div>
-                                    <div class="share-icon">
-                                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                        <div class="social-link-box">
-                                            <ul class="team-social-link">
-                                                <li>
-                                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="title-inner">
-                                        <div class="share-icon-border"></div>
-                                        <h5><a href="#">Amelia Isabella</a></h5>
-                                        <p>Quality Head</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Team Style1-->
-                    <!--Start Single Team Style1-->
-                    <div class="col-xl-3 col-lg-6 col-lg-6">
-                        <div class="single-team-style1 wow fadeInRight animated" data-wow-delay="00ms"
-                            data-wow-duration="1500ms">
-                            <div class="img-holder">
-                                <div class="inner">
-                                    <img src="{% static 'web/images/team/team-v1-4.jpg' %}" alt="" />
-                                    <div class="overlay-box"></div>
-                                </div>
-                                <div class="title-holder">
-                                    <div class="share-icon-border two"></div>
-                                    <div class="share-icon">
-                                        <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                        <div class="social-link-box">
-                                            <ul class="team-social-link">
-                                                <li>
-                                                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="title-inner">
-                                        <div class="share-icon-border"></div>
-                                        <h5><a href="#">Fabian Barrie</a></h5>
-                                        <p>Operator</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Team Style1-->
-
-                </div>
-            </div>
-        </section>
-        <!--End Team Style1 Area-->
-
+{% comment %} 
         <!--Start Certificates Area-->
         <section class="certificates-area">
             <div class="container">
@@ -784,5 +386,5 @@
                 </div>
             </div>
         </section>
-        <!--End Certificates Area-->
+        <!--End Certificates Area--> {% endcomment %}
 {% endblock %}

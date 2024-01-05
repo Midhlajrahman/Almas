@@ -6,48 +6,22 @@
 <section class="main-slider style2">
     <div class="slider-box">
         <!-- Banner Carousel -->
-        <div class="banner-carousel owl-theme owl-carousel">
-            <!-- Slide -->
-            <div class="slide">
-                <div class="image-layer" style="background-image:url({% static 'web/images/slides/slide-v2-1.jpg' %})">
-                </div>
-                <div class="auto-container">
-                    <div class="content text-center">
-                        <div class="sub-title">
-                            <h6>delivery services in USA</h6>
-                        </div>
-                        <div class="big-title">
-                            <h2>Almas Dealer<br> is Closer than You Think</h2>
-                        </div>
-                        <div class="text">
-                            <p>Duty obligations business it will frequently occur that pleasures.</p>
-                        </div>
-                        <div class="btns-box center">
-                            <a class="btn-one" href="about.html">
-                                <div class="round"></div>
-                                <span class="txt">Read More</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Slide -->
+        <div class="banner-carousel owl-thme owl-carousel">
+           
             <div class="slide">
                 <div class="image-layer" style="background-image:url({% static 'web/images/slides/slide-v2-2.jpg' %})">
                 </div>
-                <div class="auto-container">
+                <div class="auto-contaner">
                     <div class="content text-center">
                         <div class="sub-title">
-                            <h6>delivery services in USA</h6>
+                            <h6>delivery services in QATAR</h6>
                         </div>
                         <div class="big-title">
                             <h2>Delivered Right To<br> Your Home & Office Door.</h2>
                         </div>
-                        <div class="text">
-                            <p>Duty obligations business it will frequently occur that pleasures.</p>
-                        </div>
+                      
                         <div class="btns-box center">
-                            <a class="btn-one" href="about.html">
+                            <a class="btn-one" href="{% url "web:about" %}">
                                 <div class="round"></div>
                                 <span class="txt">Read More</span>
                             </a>
@@ -55,31 +29,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Slide -->
-            <div class="slide">
-                <div class="image-layer" style="background-image:url({% static 'web/images/slides/slide-v2-3.jpg' %})">
-                </div>
-                <div class="auto-container">
-                    <div class="content text-center">
-                        <div class="sub-title">
-                            <h6>delivery services in USA</h6>
-                        </div>
-                        <div class="big-title">
-                            <h2>Almas Dealer<br> is Closer than You Think</h2>
-                        </div>
-                        <div class="text">
-                            <p>Duty obligations business it will frequently occur that pleasures.</p>
-                        </div>
-                        <div class="btns-box center">
-                            <a class="btn-one" href="about.html">
-                                <div class="round"></div>
-                                <span class="txt">Read More</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+          
         </div>
     </div>
 </section>
@@ -109,7 +59,7 @@
                                 </div>
                                 <div class="title">
                                     <h3>High Quality</h3>
-                                    <p>Take trivial example which ever...</p>
+                                    <p>We assure extra safety & promise high quality of the water we deliver.</p>
                                 </div>
                             </div>
                         </div>
@@ -134,8 +84,8 @@
                                     <span class="icon-write-message"></span>
                                 </div>
                                 <div class="title">
-                                    <h3>No Contract</h3>
-                                    <p>Righteous indigna dislike men...</p>
+                                    <h3>Fast Delivery </h3>
+                                    <p>You can ring us anytime to avail of our speedy delivery service.</p>
                                 </div>
                             </div>
                         </div>
@@ -160,8 +110,8 @@
                                     <span class="icon-truck"></span>
                                 </div>
                                 <div class="title">
-                                    <h3>Fast Delivery</h3>
-                                    <p>Equal blame belongs those fail...</p>
+                                    <h3>Tested at Our Lab </h3>
+                                    <p>Our chemical team ensures water quality through proper tests.</p>
                                 </div>
                             </div>
                         </div>
@@ -185,16 +135,16 @@
                                     </div>
                                     <span class="icon-hand"></span>
                                 </div>
-                                <div class="title">
-                                    <h3>Affordable Price</h3>
-                                    <p>Duty through weaknes shrinking...</p>
+                                <div class="title ">
+                                    <h3>Affordable price range </h3>
+                                    <p>
+                                        We ensure the best by offering budget-friendly water costs. </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!--End Single Choose Box Style2-->
-
             </div>
         </div>
     </div>
@@ -207,9 +157,9 @@
     <div class="container">
         <div class="sec-title text-center">
             <div class="sub-title">
-                <h5>Products</h5>
+                <h5>OUR PRODUCTS</h5>
             </div>
-            <h2>We pride ourselves on our <br>Products</h2>
+            <h2>Showcasing our major products <br> for you</h2>
 
         </div>
         <div class="row">
@@ -219,7 +169,7 @@
             {% for product in products %}
             <div class="col-xl-4">
                 <div class="single-service-style2">
-                    <div class="img-holder">
+                    <div class="img-holde">
                         <a href="{{product.get_absolute_url}}"><div class="inner product-img">
                             <img src="{{product.image.url}}" alt="">
                         </div></a>
@@ -233,7 +183,7 @@
                             </div>
                         </div>
                         <div class="bottom">
-                            <p>{{product.description}}</p>
+                            <p>{{product.description |truncatechars:70}}</p>
                             <div class="btn-box">
                                 <a class="btn-one" href="{{product.get_absolute_url}}">
                                     <div class="round"></div>
@@ -246,59 +196,13 @@
             </div>
             {% endfor %}
         </div>
-
         </div>
     </div>
 </section>
 <!--End Service Style2 Area-->
 
 <!--Start About Style2 Area-->
-<section class="about-style2-area">
-    <div class="about-style2_image-bg"
-        style="background-image: url({% static 'web/images/resources/about-style2-bg.jpg' %});">
-        <div class="about-style2-image-box wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
-            <img src="{% static 'web/images/resources/about-style2-man.png' %}" alt="">
-            <div class="thm-round-box1 js-tilt paroller">
-                <h3>Over<br> 20+ Years<br> Experience</h3>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6">
-
-            </div>
-            <div class="col-xl-6">
-                <div class="about-style2_content">
-                    <div class="sec-title">
-                        <div class="sub-title">
-                            <h5>About Company</h5>
-                        </div>
-                        <h2>Spring water <br>to homes & businesses</h2>
-
-                    </div>
-                    <div class="inner-content">
-                        <h5>100% USA owned & operated</h5>
-                        <div class="text">
-                            <p>Denouncing pleasure and praising pain was born and I will give you a complete account of
-                                the system and expound the actual teachings the great explorer of the truth, the
-                                master-builder.</p>
-                            <p>Denouncing pleasure and praising pain was born and I will give you a complete account of
-                                the system and expound the actual teachings the great explorer of the truth, the
-                                master-builder.</p>
-                            <p>Denouncing pleasure and praising pain was born and I will give you a complete account of
-                                the system and expound the actual teachings the great explorer of the truth, the
-                                master-builder.</p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
+{% include "web/partials/about.html" %}
 <!--End About Style2 Area-->
 
 <!--Start Fact Counter Area-->
@@ -317,7 +221,7 @@
                                     <span class="k">k</span>
                                 </div>
                                 <div class="title">
-                                    <h6>Water Bottled<br> Delivered</h6>
+                                    <h6>Water Bottles<br> Delivered</h6>
                                 </div>
                             </div>
                         </li>
@@ -330,7 +234,7 @@
                                     <span class="plus">+</span>
                                 </div>
                                 <div class="title">
-                                    <h6>Years of <br>Experienced</h6>
+                                    <h6>Years of <br>Experience</h6>
                                 </div>
                             </div>
                         </li>
@@ -342,7 +246,7 @@
                                     <span class="count-text" data-speed="3000" data-stop="45">0</span>
                                 </div>
                                 <div class="title">
-                                    <h6>Professional Team <br>Members</h6>
+                                    <h6>Experienced Team <br>Members</h6>
                                 </div>
                             </div>
                         </li>
@@ -354,7 +258,7 @@
                                     <span class="count-text" data-speed="3000" data-stop="27">0</span>
                                 </div>
                                 <div class="title">
-                                    <h6>Currently Serving <br />Areas in City</h6>
+                                    <h6> Locations of<br />Service</h6>
                                 </div>
                             </div>
                         </li>
@@ -365,7 +269,7 @@
                                     <span class="count-text" data-speed="3000" data-stop="760">0</span>
                                 </div>
                                 <div class="title">
-                                    <h6>Customers <br>Happy With Us</h6>
+                                    <h6>Happy <br>Customers</h6>
                                 </div>
                             </div>
                         </li>
@@ -378,11 +282,6 @@
 </section>
 <!--End Fact Counter Area-->
 
-
-
-
-
-
 <!--Start Testimonials Style2 area -->
 <section class="testimonials-style2-area">
     <div class="layer-outer"
@@ -392,7 +291,7 @@
             <div class="sub-title">
                 <h5>Testimonials</h5>
             </div>
-            <h2 class="clr_white">Here's what our customers<br> say about us</h2>
+            <h2 class="clr_white">This is what they<br> tell about us </h2>
 
         </div>
 
@@ -402,6 +301,7 @@
                     data-options='{"loop": true, "margin": 30, "autoheight":true, "lazyload":true, "nav": false, "dots": false, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 300, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "1" } , "992":{ "items" : "2" }, "1200":{ "items" : "3" }}}'>
 
                     <!--Start Single Testimonials Style2-->
+                    {% for t in testimonial %}
                     <div class="single-testimonials-style2">
                         <div class="icon">
                             <span class="icon-left-quote"></span>
@@ -416,86 +316,25 @@
                                     <li><i class="fa fa-star" aria-hidden="true"></i></li>
                                 </ul>
                             </div>
-                            <p>Have used their service for five years & can say the service has always been amazing.
-                                Delivery driver is friendly & we recommend.</p>
+                            <p>{{t.description}}</p>
                             <div class="bottom">
                                 <div class="img-box">
-                                    <img src="{% static 'web/images/testimonial/testimonial-v2-1.jpg' %}" alt="" />
+                                    <img src="{{t.image.url}}" alt="" />
                                 </div>
                                 <div class="author-name">
-                                    <h6><a href="#">Rodha Thelma</a></h6>
-                                    <p>Newyork</p>
+                                    <h6><a href="#">{{t.name}}</a></h6>
+                                    <p>{{t.position |default:""}}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--End Single Testimonials Style2-->
-                    <!--Start Single Testimonials Style2-->
-                    <div class="single-testimonials-style2">
-                        <div class="icon">
-                            <span class="icon-left-quote"></span>
-                        </div>
-                        <div class="inner-content">
-                            <div class="rateing-box">
-                                <ul>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                </ul>
-                            </div>
-                            <p>I went to the Almas water office to speak with someone in person about Almas services.
-                                The team was very professional.</p>
-                            <div class="bottom">
-                                <div class="img-box">
-                                    <img src="{% static 'web/images/testimonial/testimonial-v2-2.jpg' %}" alt="" />
-                                </div>
-                                <div class="author-name">
-                                    <h6><a href="#">Benji Alphonsa</a></h6>
-                                    <p>California</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Testimonials Style2-->
-                    <!--Start Single Testimonials Style2-->
-                    <div class="single-testimonials-style2">
-                        <div class="icon">
-                            <span class="icon-left-quote"></span>
-                        </div>
-                        <div class="inner-content">
-                            <div class="rateing-box">
-                                <ul>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                    <li><i class="fa fa-star" aria-hidden="true"></i></li>
-                                </ul>
-                            </div>
-                            <p>I have been receiving spring water from Almas for about a years now. The water is
-                                delicious, remind you of delivery dates.</p>
-                            <div class="bottom">
-                                <div class="img-box">
-                                    <img src="{% static 'web/images/testimonial/testimonial-v2-3.jpg' %}" alt="" />
-                                </div>
-                                <div class="author-name">
-                                    <h6><a href="#">Atulia Sajita</a></h6>
-                                    <p>California</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--End Single Testimonials Style2-->
-
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 </section>
 <!--End Testimonials Style2 area -->
-
 
 <!--Start contact Style2 Area-->
 <section class="contact-style2-area">
@@ -517,38 +356,38 @@
                         <div class="sub-title">
                             <h5>get in Touch</h5>
                         </div>
-                        <h2>Please email us<br> with your questions</h2>
+                        <h2>Feel free to <br> contact us anytime </h2>
 
                     </div>
-                    <form id="contact-form" name="contact_form" class="default-form1" action="#" method="post">
+                    <form id="contact-form" name="contact_form" class="default-form1 ajax reload" action="#" method="post">
+                        {% csrf_token %}
                         <div class="input-box">
-                            <input type="text" name="form_name" value="" placeholder="Your Name" required="">
+                            {% comment %} <input type="text" name="form_name" value="" placeholder="Your Name" required=""> {% endcomment %}
+                            {{form.name}}
                             <div class="icon">
                                 <i class="fa fa-user" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="input-box">
-                            <input type="email" name="form_email" value="" placeholder="Email Address" required="">
+                            {% comment %} <input type="email" name="form_email" value="" placeholder="Email Address" required=""> {% endcomment %}
+                            {{form.email}}
                             <div class="icon">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="input-box">
                             <div class="select-box">
-                                <div class="round-shape"></div>
-                                <select class="wide">
-                                    <option data-display="Service You Need">Service You Need</option>
-                                    <option value="1">Bottled Water</option>
-                                    <option value="2">Water Dispenser</option>
-                                    <option value="3">Water Trailers</option>
-                                </select>
+                                <div class="round-shape" ></div>
+                                  {{form.service}}
                             </div>
+                            
                             <div class="icon">
                                 <i class="fa fa-cog" aria-hidden="true"></i>
                             </div>
                         </div>
                         <div class="input-box">
-                            <textarea name="form_message" placeholder="Your Message" required=""></textarea>
+                            {% comment %} <textarea name="form_message" placeholder="Your Message" required=""></textarea> {% endcomment %}
+                            {{form.message}}
                             <div class="icon">
                                 <i class="fa fa-text-width" aria-hidden="true"></i>
                             </div>
@@ -568,10 +407,6 @@
 </section>
 <!--End contact Style2 Area-->
 
-
-
-
-
 <!--Start Blog Style2 Area-->
 <section class="blog-style2-area">
     <div class="container">
@@ -580,114 +415,11 @@
                 <h5>Recent Blog Post</h5>
             </div>
             <h2>Read our company news<br> & updates</h2>
-
         </div>
-        <div class="row text-right-rtl">
-            <!--Start Single blog Style2-->
-            <div class="col-xl-4">
-                <div class="single-blog-style1 single-blog-style2 wow fadeInUp" data-wow-duration="1500ms">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="{% static 'web/images/blog/blog-v2-1.jpg' %}" alt="">
-                        </div>
-                        <div class="categories">
-                            <h6><i class="fa fa-folder"></i>Bottled Water</h6>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <div class="meta-box">
-                            <ul class="meta-info">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> May 10, 2023</li>
-                            </ul>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="blog-single.html">Packaged Water: <br> What Things to Consider?</a>
-                        </h3>
-                        <div class="btns-box">
-                            <div class="left">
-                                <a class="btn-two" href="blog-single.html"><span class="icon-right-arrow"></span>Read
-                                    More</a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>04</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Single blog Style2-->
-            <!--Start Single blog Style2-->
-            <div class="col-xl-4">
-                <div class="single-blog-style1 single-blog-style2 wow fadeInUp" data-wow-duration="1500ms">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="{% static 'web/images/blog/blog-v2-2.jpg' %}" alt="">
-                        </div>
-                        <div class="categories">
-                            <h6><i class="fa fa-folder"></i>Water Cooler</h6>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <div class="meta-box">
-                            <ul class="meta-info">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> April 29, 2023</li>
-                            </ul>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="blog-single.html">Top Benefits of Having Our Mobile App</a>
-                        </h3>
-                        <div class="btns-box">
-                            <div class="left">
-                                <a class="btn-two" href="blog-single.html"><span class="icon-right-arrow"></span>Read
-                                    More</a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>04</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Single blog Style2-->
-            <!--Start Single blog Style2-->
-            <div class="col-xl-4">
-                <div class="single-blog-style1 single-blog-style2 wow fadeInUp" data-wow-duration="1500ms">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="{% static 'web/images/blog/blog-v2-3.jpg' %}" alt="">
-                        </div>
-                        <div class="categories">
-                            <h6><i class="fa fa-folder"></i>Health Tips</h6>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <div class="meta-box">
-                            <ul class="meta-info">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> April 22, 2023</li>
-                            </ul>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="blog-single.html">Five Tips to Keep Your<br> Body Hydrated</a>
-                        </h3>
-                        <div class="btns-box">
-                            <div class="left">
-                                <a class="btn-two" href="blog-single.html"><span class="icon-right-arrow"></span>Read
-                                    More</a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>04</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--End Single blog Style2-->
-        </div>
+        {% include 'web/partials/blog.html' %}
     </div>
 </section>
 <!--End Blog Style2 Area-->
-
-
 
 <!--Start Partner Area-->
 <section class="partner-area">

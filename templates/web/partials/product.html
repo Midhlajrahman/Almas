@@ -1,0 +1,35 @@
+{% load static %}
+<!--Start Shop Style1 Area-->
+<section class="shop-page-one">
+
+    <div class="shop-page-one_inner">
+        <div class="auto-container">
+            <div class="shop-style1_content">
+                {% for product in products %}
+                <!--Start Single Shop Item-->
+                <div class="single-shop-item">
+                    <div class="single-shop-item_inner">
+                        <div class="img-holder product-img">
+                            <a href="{{product.get_absolute_url}}"> <img src="{{product.image.url}}" alt=""></a>
+                        </div>
+                        <div class="title-holder">
+                            <h3><a href="{{product.get_absolute_url}}">{{product.name}}</a></h3>
+                            <h6>Pack Size:</h6>
+                            <p>{{product.size}}</p>
+                            <div class="btn-box">
+                                <a class="btn-one" href="{{product.get_absolute_url}}">
+                                    <div class="round"></div>
+                                    <span class="txt">Enquiry Now</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Single Shop Item-->
+                {% endfor %}
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--End Shop Style1 Area-->

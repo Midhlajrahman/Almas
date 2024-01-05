@@ -267,7 +267,7 @@
     display: block;
 }
 .about-style2_content .sec-title{
-    padding-bottom: 48px;
+    padding-bottom: 3px;
 }
 .about-style2_content .inner-content{
     position: relative;
@@ -399,7 +399,7 @@
     position: relative;
     display: block;
     background: #ffffff;
-    padding: 110px 0 0px;    
+    padding: 10px 0 0px;    
 }
 .about-style3-top {
     position: relative;

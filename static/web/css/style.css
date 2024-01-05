@@ -3646,7 +3646,8 @@ select:focus {
 
 .contact-form-box1 form input[type="text"],
 .contact-form-box1 form input[type="email"],
-.contact-form-box1 form textarea{
+.contact-form-box1 form textarea,
+.contact-form-box1 form select{
     position: relative;
     display: block;   
     background: #ecf2f6;
@@ -3921,6 +3922,7 @@ select:focus {
 }
 .contact-form-box1--style2 form .nice-select {
     height: 70px;
+    width: 100%;
     line-height: 68px;
     border-radius: 10px;
     padding-left: 75px;

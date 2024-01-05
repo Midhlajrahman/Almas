@@ -3,20 +3,19 @@
 <!--Start footer area -->
 <footer class="footer-area">
     <!--Start Footer-->
+    <hr>
     <div class="footer">
         <div class="container">
             <div class="row text-right-rtl">
-
                 <!--Start single footer widget-->
                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.1s">
                     <div class="single-footer-widget marbtm50">
                         <div class="our-company-info">
                             <div class="footer-logo">
-                                <a href="index.html"><img src="{% static 'web/images/footer/footer-logo.png' %}" alt="" /></a>
+                                <a href="index.html"><img src="{% static 'web/images/resources/logo.svg' %}" alt="" /></a>
                             </div>
                             <div class="text-box">
-                                <p>Indignation and dislike men who are so beguiled and demoralized by the charms of
-                                    pleasure of the moment so blinded by desire all they cannot foresee.</p>
+                                <p>Every drop we deliver defines purity and with a committed heart, we are delighted to serve you. </p>
                             </div>
                             <div class="our-company-info-list">
                                 <ul>
@@ -28,7 +27,6 @@
                     </div>
                 </div>
                 <!--End single footer widget-->
-
                 <!--Start single footer widget-->
                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.3s">
                     <div class="single-footer-widget martop marbtm50">
@@ -40,25 +38,16 @@
                         </div>
                         <div class="footer-widget-links">
                             <ul class="pull-left">
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Career</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Feedback</a></li>
-                                <li><a href="#">Location</a></li>
-                            </ul>
-                            <ul class="pull-left marleft-60">
-                                <li><a href="#">Benefits</a></li>
-                                <li><a href="#">Enquire</a></li>
-                                <li><a href="#">How we Work</a></li>
-                                <li><a href="#">Products</a></li>
-                                <li><a href="#">Service</a></li>
+                                <li><a href="{% url "web:index" %}">HOME</a></li>
+                                <li><a href="{% url "web:about" %}">ABOUT</a></li>
+                                <li><a href="{% url "web:products" %}">PRODUCTS</a></li>
+                                <li><a href="{% url "web:blog" %}">BLOG</a></li>
+                                <li><a href="{% url "web:contact" %}">CONTACT</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <!--End single footer widget-->
-
                 <!--Start single footer widget-->
                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.5s">
                     <div class="single-footer-widget martop">
@@ -72,25 +61,18 @@
                             <div class="owl-carousel owl-theme one-item-carousel owl-nav-style-one location_carousel">
                                 <!--Start Single Location Box-->
                                 <div class="single-Location-box">
-                                    <h4>California</h4>
-                                    <p>280 Granite Run Drive <br>Suite #200 Lancaster, PA 1760</p>
-                                    <div class="phone">
-                                        <a href="tel:123456789">1-800-500-333-33</a>
+                                    <h4>Qatar</h4>
+                                    <p>Building#75, Zone:81 Street:30,<br>New industrial Area,Doha-qatar</p>
+
+                                    <div class="phoe">
+                                        <p>Home Delivery:<a href="tel:+974-4444-9010">+974-4444-9010</a></p>
                                     </div>
+                                    <div class="phoe">
+                                        <p>Contact Us:<a href="tel:+974-5026-6061">+974-5026-6061</a></p>
+                                    </div>
+                                    
                                     <div class="email">
-                                        <a href="mailto:info@templatepath.com">support@aguapure.com</a>
-                                    </div>
-                                </div>
-                                <!--End Single Location Box-->
-                                <!--Start Single Location Box-->
-                                <div class="single-Location-box">
-                                    <h4>Alabama</h4>
-                                    <p>280 Granite Run Drive <br>Suite #200 Lancaster, PA 1760</p>
-                                    <div class="phone">
-                                        <a href="tel:123456789">1-800-500-333-33</a>
-                                    </div>
-                                    <div class="email">
-                                        <a href="mailto:info@templatepath.com">support@aguapure.com</a>
+                                        <a href="mailto:info@almaswater.com">info@almaswater.com</a>
                                     </div>
                                 </div>
                                 <!--End Single Location Box-->
@@ -99,7 +81,6 @@
                     </div>
                 </div>
                 <!--End single footer widget-->
-
                 <!--Start single footer widget-->
                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.7s">
                     <div class="single-footer-widget martop pdtop50">
@@ -111,47 +92,33 @@
                         </div>
                         <div class="single-footer-widget-business-hours">
                             <ul>
-                                <li>Mon-Friday:<br />08.00 am to 08.00 pm</li>
-                                <li>Satday:<br />09.00 am to 03.00 pm</li>
+                                <li>For deliveries, book online now</li>
                             </ul>
                             <div class="btn-box">
-                                <a class="btn-one" href="#">
+                                <a class="btn-one" href="{% url "web:contact" %}">
                                     <div class="round"></div>
-                                    <span class="txt">Schedule</span>
+                                    <span class="txt">PLACE ORDER</span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     </div>
     <!--End Footer-->
-
-
     <div class="footer-bottom">
         <div class="container">
             <div class="bottom-inner clearfix">
                 <div class="copyright pull-left">
-                    <p>Copyright &copy;<a href="index.html"> 2023 Aguapure.</a> All Rights Reserved.</p>
+                    <p>Copyright &copy;<a href="https://momentumqfz.com/"> 2023 momentumqfz.com</a> </p>
                 </div>
-                <ul class="footer-nav pull-right clearfix">
-                    <li><a href="index.html">Terms & Conditions</a></li>
-                    <li><a href="index.html">Privacy Policy</a></li>
-                    <li><a href="index.html">Sitemap</a></li>
-                </ul>
             </div>
         </div>
     </div>
-
 </footer>
 <!--End footer area-->
-
-
-<button class="scroll-top scroll-to-target" data-target="html">
+{% comment %} <button class="scroll-top scroll-to-target" data-target="html">
     <span class="icon-right-arrow-1"></span>
-</button>
-
+</button> {% endcomment %}
 </div>

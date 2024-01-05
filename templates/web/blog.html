@@ -1,7 +1,6 @@
 {% extends 'web/base.html' %}
 {% load static %}
 {% block content %}
-
 <!--Start breadcrumb area paroller-->     
 <section class="breadcrumb-area">
     <div class="breadcrumb-area-bg" style="background-image: url({% static 'web/images/breadcrumb/breadcrumb-1.jpg' %});"></div>
@@ -10,11 +9,11 @@
             <div class="col-xl-12">
                 <div class="inner-content text-center">
                     <div class="title">
-                       <h2>Grid View 02</h2>
+                       <h2>Blog</h2>
                     </div>
                     <div class="breadcrumb-menu">
                         <ul>
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{% url 'web:index' %}">Home</a></li>
                             <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
                             <li class="active">Blog</li>
                         </ul>    
@@ -25,223 +24,9 @@
     </div>
 </section>
 <!--End breadcrumb area-->
+<!--Start Blog Page-->
+{% include 'web/partials/blog.html' %}
+<!--end Blog Page-->
 
-
-
-<!--Start Blog Page Two-->
-<section class="blog-page-two">
-    <div class="container">
-        <div class="row text-right-rtl">
-
-            <!--Start Single blog Style2-->
-            <div class="col-xl-4">
-                <div class="single-blog-style1 single-blog-style2 wow fadeInUp" data-wow-duration="1500ms">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="{% static 'web/images/blog/blog-v2-1.jpg' %}" alt="">
-                        </div>
-                        <div class="categories">
-                            <h6><i class="fa fa-folder"></i>Bottled Water</h6>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <div class="meta-box">
-                            <ul class="meta-info">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> May 10, 2023</li>
-                            </ul>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="blog-single.html">Packaged Water: <br> What Things to Consider?</a>
-                        </h3>
-                        <div class="btns-box">
-                            <div class="left">
-                                <a class="btn-two" href="#"><span class="icon-right-arrow"></span>Read More</a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>04</a>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-            <!--End Single blog Style2-->
-            <!--Start Single blog Style2-->
-            <div class="col-xl-4">
-                <div class="single-blog-style1 single-blog-style2 wow fadeInUp" data-wow-duration="1500ms">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="{% static 'web/images/blog/blog-v2-2.jpg' %}" alt="">
-                        </div>
-                        <div class="categories">
-                            <h6><i class="fa fa-folder"></i>Water Cooler</h6>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <div class="meta-box">
-                            <ul class="meta-info">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> April 29, 2023</li>
-                            </ul>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="blog-single.html">Top Benefits of Having Our Mobile App</a>
-                        </h3>
-                        <div class="btns-box">
-                            <div class="left">
-                                <a class="btn-two" href="#"><span class="icon-right-arrow"></span>Read More</a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>04</a>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-            <!--End Single blog Style2-->
-            <!--Start Single blog Style2-->
-            <div class="col-xl-4">
-                <div class="single-blog-style1 single-blog-style2 wow fadeInUp" data-wow-duration="1500ms">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="{% static 'web/images/blog/blog-v2-3.jpg' %}" alt="">
-                        </div>
-                        <div class="categories">
-                            <h6><i class="fa fa-folder"></i>Health Tips</h6>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <div class="meta-box">
-                            <ul class="meta-info">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> April 22, 2023</li>
-                            </ul>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="blog-single.html">Five Tips to Keep Your<br> Body Hydrated</a>
-                        </h3>
-                        <div class="btns-box">
-                            <div class="left">
-                                <a class="btn-two" href="#"><span class="icon-right-arrow"></span>Read More</a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>04</a>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-            <!--End Single blog Style2-->
-
-            <!--Start Single blog Style2-->
-            <div class="col-xl-4">
-                <div class="single-blog-style1 single-blog-style2 wow fadeInUp" data-wow-duration="1500ms">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="{% static 'web/images/blog/blog-v2-4.jpg' %}" alt="">
-                        </div>
-                        <div class="categories">
-                            <h6><i class="fa fa-folder"></i>Health Tips</h6>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <div class="meta-box">
-                            <ul class="meta-info">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> May 10, 2023</li>
-                            </ul>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="blog-single.html">Five Tips to Keep Your<br> Body Hydrated</a>
-                        </h3>
-                        <div class="btns-box">
-                            <div class="left">
-                                <a class="btn-two" href="#"><span class="icon-right-arrow"></span>Read More</a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>04</a>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-            <!--End Single blog Style2-->
-            <!--Start Single blog Style2-->
-            <div class="col-xl-4">
-                <div class="single-blog-style1 single-blog-style2 wow fadeInUp" data-wow-duration="1500ms">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="{% static 'web/images/blog/blog-v2-5.jpg' %}" alt="">
-                        </div>
-                        <div class="categories">
-                            <h6><i class="fa fa-folder"></i>Bottled Water</h6>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <div class="meta-box">
-                            <ul class="meta-info">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> April 29, 2023</li>
-                            </ul>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="blog-single.html">Aguapure Water: Never Wait for Rain Again</a>
-                        </h3>
-                        <div class="btns-box">
-                            <div class="left">
-                                <a class="btn-two" href="#"><span class="icon-right-arrow"></span>Read More</a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>04</a>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-            <!--End Single blog Style2-->
-            <!--Start Single blog Style2-->
-            <div class="col-xl-4">
-                <div class="single-blog-style1 single-blog-style2 wow fadeInUp" data-wow-duration="1500ms">
-                    <div class="img-holder">
-                        <div class="inner">
-                            <img src="{% static 'web/images/blog/blog-v2-6.jpg' %}" alt="">
-                        </div>
-                        <div class="categories">
-                            <h6><i class="fa fa-folder"></i>Water Cooler</h6>
-                        </div>
-                    </div>
-                    <div class="text-holder">
-                        <div class="meta-box">
-                            <ul class="meta-info">
-                                <li><i class="fa fa-calendar" aria-hidden="true"></i> April 22, 2023</li>
-                            </ul>
-                        </div>
-                        <h3 class="blog-title">
-                            <a href="blog-single.html">Discover The Beauties of Bulk Bottled Water</a>
-                        </h3>
-                        <div class="btns-box">
-                            <div class="left">
-                                <a class="btn-two" href="#"><span class="icon-right-arrow"></span>Read More</a>
-                            </div>
-                            <div class="right">
-                                <a href="#"><i class="fa fa-comment-o" aria-hidden="true"></i>04</a>
-                            </div>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-            <!--End Single blog Style2-->
-
-
-        </div>
-
-        <div class="row">
-            <div class="col-xl-12">
-                <ul class="styled-pagination text-center clearfix">
-                    <li class="arrow prev"><a href="#"><span class="icon-right-arrow-1 left"></span></a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li class="arrow next"><a href="#"><span class="icon-right-arrow-1 right"></span></a></li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-</section>
 <!--End Blog Page Two-->
 {% endblock %}

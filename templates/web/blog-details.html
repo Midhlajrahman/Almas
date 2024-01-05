@@ -1,0 +1,63 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+<!--Start breadcrumb area paroller-->     
+<section class="breadcrumb-area">
+    <div class="breadcrumb-area-bg" style="background-image: url({% static 'web/images/breadcrumb/breadcrumb-1.jpg' %});"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="inner-content text-center">
+                    <div class="title">
+                       <h2>BLOG </h2>
+                    </div>
+                    <div class="breadcrumb-menu">
+                        <ul>
+                            <li><a href="{% url "web:index" %}">Home</a></li>
+                            <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
+                            <li class="active">Blog Details</li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--End breadcrumb area-->
+
+<!--Start Blog Details Area-->
+<section class="blog-details-area">
+    <div class="container">
+        <div class="row text-right-rtl">
+            <div class="col-xl-8 col-lg-7">
+                <div class="blog-details-content">
+    
+                    <div class="single-blog-style1 single-blog-style3">
+                        <div class="text-holder">
+                            {% comment %} <div class="categories">
+                                <h6><i class="fa fa-folder"></i>{{blog.title}}</h6>
+                            </div> {% endcomment %}
+                            <h3 class="blog-title">{{blog.title}}</h3>
+                            <div class="meta-box">
+                                <ul class="meta-info">
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i> {{blog.date}}</li>
+                                </ul>
+                            </div>
+            
+                        </div> 
+                        <div class="img-holder">
+                            <div class="inner">
+                                <img src="{{blog.image.url}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-details-text-2">
+                        <p>{{blog.content|safe}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+       {% endblock %}

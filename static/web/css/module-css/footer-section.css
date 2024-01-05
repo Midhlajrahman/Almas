@@ -15,7 +15,7 @@
     display: block;
     padding: 110px 0 93px;
     z-index: 1;
-    background: #004da1;
+    background: #ffffff;
 }
 .single-footer-widget {
     position: relative;
@@ -33,7 +33,7 @@
     margin-bottom: 27px;
 }
 .single-footer-widget .title h3{
-    color: #ffffff;
+    color: #000000;
     font-size: 24px;
     line-height: 26px;
     font-weight: 600;
@@ -65,7 +65,7 @@
     display: block;
 }
 .single-footer-widget .our-company-info .text-box p{
-    color: #ccdbeb;
+    color: #414a53;
     font-size: 16px;
     line-height: 26px;
     margin: 0;
@@ -83,7 +83,7 @@
 .our-company-info-list ul li{
     position: relative;
     display: block;
-    color: #ccdbeb;
+    color: #414a53;
     font-size: 16px;
     line-height: 26px;
     font-weight: 400;
@@ -120,7 +120,7 @@
     line-height: 36px;
 }
 .footer-widget-links ul li a{
-    color: #ccdbeb;
+    color: #414a53;
     font-size: 16px;
     font-weight: 400;
     transition: all 200ms linear;
@@ -137,14 +137,14 @@
     padding-top: 8px;
 }
 .single-footer-widget-Location h4{
-    color: #ffffff;
+    color: #000000;
     font-size: 20px;
     line-height: 30px;
     font-weight: 600;
     margin-bottom: 13px;
 }
 .single-footer-widget-Location p{
-    color: #ccdbeb;
+    color: #414a53;
     margin: 0;
     margin-bottom: 16px;
 }
@@ -153,14 +153,14 @@
     display: block;
 }
 .single-footer-widget-Location .phone a{
-    color: #ccdbeb;
+    color: #414a53;
 }
 .single-footer-widget-Location .email{
     position: relative;
     display: block;
 }
 .single-footer-widget-Location .email a{
-    color: #ccdbeb;
+    color: #414a53;
 }
 .location_carousel .owl-nav{
     position: relative;
@@ -182,7 +182,7 @@
 .single-footer-widget-business-hours ul li{
     position: relative;
     display: block;
-    color: #ccdbeb;
+    color: #414a53;
     margin-bottom: 16px;
 }
 .single-footer-widget-business-hours ul li:last-child{
@@ -208,7 +208,7 @@
 .footer-bottom{
     position: relative;
     display: block;
-    background: #02458d;
+    background: #ffffff;
     padding: 22px 0px 24px;
 }
 .footer-bottom .bottom-inner{
@@ -220,7 +220,7 @@
     display: block;
 }
 .footer-bottom .bottom-inner .copyright p{
-    color: #ccdbeb;
+    color: #414a53;
     margin: 0;
 }
 .footer-bottom .bottom-inner .copyright p a{
@@ -256,7 +256,7 @@
     padding-right: 0;
 }
 .footer-bottom .bottom-inner .footer-nav li a{
-    color: #ccdbeb;
+    color: #414a53;
     font-size: 16px;
     line-height: 26px;
     font-weight: 400;

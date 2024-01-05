@@ -1,0 +1,36 @@
+{% load static %}
+<!-- Start Blog Page -->
+<section class="blog-page-two">
+  <div class="container">
+    <div class="row text-right-rtl">
+      {% for b in blog %}
+        <!-- Start Single blog Style2 -->
+        <div class="col-xl-4">
+          <div class="single-blog-style1 single-blog-style2 wow fadeInUp" data-wow-duration="1500ms">
+            <div class="img-holder">
+              <div class="inner">
+                <a href="{% url 'web:blog-details' slug=b.slug %}"><img src="{{ b.image.url }}" alt="" /></a>
+              </div>
+            </div>
+            <div class="text-holder">
+              <div class="meta-box">
+                <ul class="meta-info">
+                  <li>
+                    <i class="fa fa-calendar" aria-hidden="true"></i> {{ b.date }}
+                  </li>
+                </ul>
+              </div>
+              <h3 class="blog-title"><a href="{% url 'web:blog-details' slug=b.slug %}">{{ b.title }}</a></h3>
+              <div class="btns-box">
+                <div class="left">
+                  <a class="btn-two" href="{% url 'web:blog-details' slug=b.slug %}"><span class="icon-right-arrow"></span>Read More</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Single blog Style2 -->
+      {% endfor %}
+    </div>
+  </div>
+</section>

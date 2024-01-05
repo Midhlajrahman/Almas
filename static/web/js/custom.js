@@ -310,13 +310,13 @@ if ($('.banner-carousel').length) {
     $('.banner-carousel').owlCarousel({
         animateOut: 'fadeOut',
         animateIn: 'fadeIn',
-        loop:true,
+        loop:false,
         margin:0,
         dots: true,
         nav:true,
         singleItem:true,
         smartSpeed: 500,
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout:6000,
         navText: [ '<span class="flaticon-left-arrow"></span>', '<span class="flaticon-right-arrow"></span>' ],
         responsive:{
@@ -339,7 +339,7 @@ if ($('.banner-carousel').length) {
 // One Item Carousel
 if ($('.one-item-carousel').length) {
     $('.one-item-carousel').owlCarousel({
-        loop: true,
+        loop: false,
         margin: 0,
         dots: false,
         nav: true,

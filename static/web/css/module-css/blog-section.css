@@ -187,7 +187,7 @@
     position: relative;
     display: block;
     background: #ffffff;
-    padding: 110px 0 80px;
+    /* padding: 110px 0 80px; */
     z-index: 1;
 }
 
@@ -262,7 +262,7 @@
     position: relative;
     display: block;
     background: #ffffff;
-    padding: 110px 0 110px;
+    /* padding: 110px 0 110px; */
     z-index: 1;
 }
 
@@ -342,7 +342,7 @@
     position: relative;
     display: block;
     background: #ffffff;
-    padding: 110px 0 110px;
+    padding: 16px 0 -1px !important;
     z-index: 1;
 }
 .blog-details-content{
