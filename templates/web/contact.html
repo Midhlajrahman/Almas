@@ -1,200 +1,181 @@
 {% extends 'web/base.html' %}
 {% load static %}
 {% block content %}
-
-<!--Start breadcrumb area paroller-->     
-<section class="breadcrumb-area breadcrumb-area--style2">
+  <!-- Start breadcrumb area paroller -->
+  <section class="breadcrumb-area breadcrumb-area--style2">
     <div class="breadcrumb-area-bg" style="background-image: url({% static 'web/images/breadcrumb/breadcrumb-2.jpg' %});"></div>
     <div class="man-outer wow slideInRight" data-wow-duration="2000ms">
-        <img src="{% static 'web/images/breadcrumb/breadcrumb-man.png' %}" alt="">
-    </div> 
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="inner-content text-center">
-                    <div class="title">
-                       <h2>Get in Touch</h2>
-                    </div>
-                    <div class="breadcrumb-menu">
-                        <ul>
-                            <li><a href="{% url 'web:index' %}">Home</a></li>
-                            <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-                            <li class="active">Contact</li>
-                        </ul>    
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <!--Start Single Contact Info Box-->
-            <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="single-contact-info-box">
-                    <div class="icon">
-                        <span class="icon-placeholder"></span>
-                    </div>
-                    <div class="text">
-                        <h3>Address</h3>
-                        <p>Building#75, Zone:81 Street:30,<br>New industrial Area,Doha-qatar</p>
-                    </div>
-                </div>
-            </div>
-            <!--End Single Contact Info Box-->
-            <!--Start Single Contact Info Box-->
-            <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="single-contact-info-box">
-                    <div class="icon">
-                        <span class="icon-calling"></span>
-                    </div>
-                    <div class="text">
-                        <h3>Phone</h3>
-                        <p>Home Delivery: <a href="tel:+974-4444-9010">+974-4444-9010</a><br> Contact :<a href="fax:+974-5026-6061">+974-5026-6061</a></p>
-                    </div>
-                </div>
-            </div>
-            <!--End Single Contact Info Box-->
-            <!--Start Single Contact Info Box-->
-            <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="single-contact-info-box">
-                    <div class="icon">
-                        <span class="icon-email"></span>
-                    </div>
-                    <div class="text">
-                        <h3>Email</h3>
-                       <p><a href="mailto:info@almaswater.com">info@almaswater.com</a><br> <br></p>
-                    </div>
-                </div>
-            </div>
-            <!--End Single Contact Info Box-->
-            <!--Start Single Contact Info Box-->
-            <div class="col-xl-3 col-lg-6 col-md-6">
-                <div class="single-contact-info-box">
-                    <div class="icon">
-                        <span class="icon-clock"></span>
-                    </div>
-                    <div class="text">
-                        <h3>Off. Hrs</h3>
-                        <p>8 am to 5 pm</p> <br>
-                    </div>
-                </div>
-            </div>
-            <!--End Single Contact Info Box-->
-
-        </div>
+      <img src="{% static 'web/images/breadcrumb/breadcrumb-man.png' %}" alt="" />
     </div>
-</section>
-<!--End breadcrumb area-->
-
-<!--Start Main Contact Form Area-->
-<section class="main-contact-form-area">
     <div class="container">
-        <div class="sec-title text-center">
-            <div class="sub-title">
-                <h5>Enquire With Us</h5>
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="inner-content text-center">
+            <div class="title">
+              <h2>Get in Touch</h2>
             </div>
-            <h2>We’re love to assist with<br> your enquiry!</h2>
-            <div class="decor">
-                <img src="{% static 'web/images/shape/decor.png' %}" alt="">
+            <div class="breadcrumb-menu">
+              <ul>
+                <li>
+                  <a href="{% url 'web:index' %}">Home</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </li>
+                <li class="active">Contact</li>
+              </ul>
             </div>
+          </div>
         </div>
-        <div class="row">
+      </div>
 
-            <div class="col-xl-6 contact_body"  >
-                <div class="contact-style1_form">
-                    <div class="top-title">
-                        <h3>Send Your Message</h3>
-                    </div>
-                    <div class="contact-form">
-                        <form id="contact-form" class="default-form2 ajax reload" action="{% url 'web:contact' %}" method="POST">
-
-                            {% csrf_token %}
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="input-box"> 
-                                        {{form.name}}
-                                        <div class="icon">
-                                            <i class="fa fa-user" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-12">
-                                    <div class="input-box"> 
-                                        {% comment %} <input type="email" name="form_email" value="" placeholder="Email :" required=""> {% endcomment %}
-                                        {{form.email}}
-                                        <div class="icon">
-                                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                                        </div>
-                                    </div>    
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="input-box">
-                                        {% comment %} <input type="text" name="form_phone" value="" placeholder="Phone :"> {% endcomment %}
-                                        {{form.phone}}
-                                        <div class="icon">
-                                            <i class="fa fa-phone" aria-hidden="true"></i>
-                                        </div>
-                                    </div>   
-                                </div>
-                                <div class="col-xl-12">
-                                    <div class="input-box">
-                                        {% comment %} <input type="text" name="form_subject" value="" placeholder="Subject :"> {% endcomment %}
-                                        {{form.subject}}
-                                        <div class="icon">
-                                            <i class="fa fa-file" aria-hidden="true"></i>
-                                        </div>
-                                    </div>   
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-12">
-                                    <div class="input-box two">
-                                        {% comment %} <textarea name="form_message" placeholder="Enter your message..." required=""></textarea> {% endcomment %}
-                                        {{form.message}}
-                                        <div class="icon">
-                                            <i class="fa fa-text-width" aria-hidden="true"></i>
-                                        </div>
-                                    </div>
-                                    <div class="button-box">
-                                        <button class="btn-one" type="submit" data-loading-text="Please wait...">
-                                            <span class="round"></span>
-                                            <span class="txt">Submit</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
+      <div class="row">
+        <!-- Start Single Contact Info Box -->
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <div class="single-contact-info-box">
+            <div class="icon">
+              <span class="icon-placeholder"></span>
             </div>
-
+            <div class="text">
+              <h3>Address</h3>
+              <p>
+                Building#75, Zone:81 Street:30,<br />New industrial Area,Doha-qatar
+              </p>
+            </div>
+          </div>
         </div>
+        <!-- End Single Contact Info Box -->
+        <!-- Start Single Contact Info Box -->
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <div class="single-contact-info-box">
+            <div class="icon">
+              <span class="icon-calling"></span>
+            </div>
+            <div class="text">
+              <h3>Phone</h3>
+              <p>
+                Home Delivery: <a href="tel:+974-4444-9010">+974-4444-9010</a><br /> Contact :<a href="fax:+974-5026-6061">+974-5026-6061</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- End Single Contact Info Box -->
+        <!-- Start Single Contact Info Box -->
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <div class="single-contact-info-box">
+            <div class="icon">
+              <span class="icon-email"></span>
+            </div>
+            <div class="text">
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:info@almaswater.com">info@almaswater.com</a><br /> <br />
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- End Single Contact Info Box -->
+        <!-- Start Single Contact Info Box -->
+        <div class="col-xl-3 col-lg-6 col-md-6">
+          <div class="single-contact-info-box">
+            <div class="icon">
+              <span class="icon-clock"></span>
+            </div>
+            <div class="text">
+              <h3>Off. Hrs</h3>
+              <p>8 am to 5 pm</p> <br />
+            </div>
+          </div>
+        </div>
+        <!-- End Single Contact Info Box -->
+      </div>
     </div>
-</section>
-<!--End Main Contact Form Area-->
-{% comment %} <!--Start Google map area-->
-<section class="google-map-area">
+  </section>
+  <!-- End breadcrumb area -->
+
+  <!-- Start Main Contact Form Area -->
+  <section class="main-contact-form-area">
     <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="contact-page-map-outer">
-                    <!--Map Canvas-->
-                    <div class="map-canvas"
-                        data-zoom="12"
-                        data-lat="-37.817085"
-                        data-lng="144.955631"
-                        data-type="roadmap"
-                        data-hue="#ffc400"
-                        data-title="Envato"
-                        data-icon-path="{% static 'web/images/resources/map-marker.png' %}"
-                        data-content="Melbourne VIC 3000, Australia<br><a href='mailto:info@youremail.com'>info@youremail.com</a>">
-                    </div>
-                </div>
-            </div>
+      <div class="sec-title text-center">
+        <div class="sub-title">
+          <h5>Enquire With Us</h5>
         </div>
+        <h2>We’re love to assist with<br /> your enquiry!</h2>
+        <div class="decor">
+          <img src="{% static 'web/images/shape/decor.png' %}" alt="" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xl-6 contact_body">
+          <div class="contact-style1_form">
+            <div class="top-title">
+              <h3>Send Your Message</h3>
+            </div>
+            <div class="contact-form">
+              <form id="contact-form" class="default-form2 ajax reload" action="{% url 'web:contact' %}" method="POST">
+                {% csrf_token %}
+                <div class="row">
+                  <div class="col-xl-12">
+                    <div class="input-box">
+                      {{ form.name }}
+                      <div class="icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-12">
+                    <div class="input-box">
+                      {% comment %} <input type="email" name="form_email" value="" placeholder="Email :" required="" /> {% endcomment %}
+                      {{ form.email }}
+                      <div class="icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12">
+                    <div class="input-box">
+                      {% comment %} <input type="text" name="form_phone" value="" placeholder="Phone :" /> {% endcomment %}
+                      {{ form.phone }}
+                      <div class="icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-xl-12">
+                    <div class="input-box">
+                      {% comment %} <input type="text" name="form_subject" value="" placeholder="Subject :" /> {% endcomment %}
+                      {{ form.subject }}
+                      <div class="icon">
+                        <i class="fa fa-file" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xl-12">
+                    <div class="input-box two">
+                      {% comment %} <textarea name="form_message" placeholder="Enter your message..." required=""></textarea> {% endcomment %}
+                      {{ form.message }}
+                      <div class="icon">
+                        <i class="fa fa-text-width" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div class="button-box">
+                      <button class="btn-one" type="submit" data-loading-text="Please wait...">
+                        <span class="round"></span>
+                        <span class="txt">Submit</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-<!--Start Google map area--> {% endcomment %}
+  </section>
+  <!-- End Main Contact Form Area -->
 {% endblock %}

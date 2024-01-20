@@ -1,32 +1,36 @@
 {% extends 'web/base.html' %}
 {% load static %}
 {% block content %}
-<!--Start breadcrumb area paroller-->     
-<section class="breadcrumb-area">
+  <!-- Start breadcrumb area paroller -->
+  <section class="breadcrumb-area">
     <div class="breadcrumb-area-bg" style="background-image: url({% static 'web/images/breadcrumb/breadcrumb-1.jpg' %});"></div>
     <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="inner-content text-center">
-                    <div class="title">
-                       <h2>Blog</h2>
-                    </div>
-                    <div class="breadcrumb-menu">
-                        <ul>
-                            <li><a href="{% url 'web:index' %}">Home</a></li>
-                            <li><i class="fa fa-angle-right" aria-hidden="true"></i></li>
-                            <li class="active">Blog</li>
-                        </ul>    
-                    </div>
-                </div>
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="inner-content text-center">
+            <div class="title">
+              <h2>Blog</h2>
             </div>
+            <div class="breadcrumb-menu">
+              <ul>
+                <li>
+                  <a href="{% url 'web:index' %}">Home</a>
+                </li>
+                <li>
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </li>
+                <li class="active">Blog</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</section>
-<!--End breadcrumb area-->
-<!--Start Blog Page-->
-{% include 'web/partials/blog.html' %}
-<!--end Blog Page-->
+  </section>
+  <!-- End breadcrumb area -->
+  <!-- Start Blog Page -->
+  {% include 'web/partials/blog.html' %}
+  <!-- end Blog Page -->
 
-<!--End Blog Page Two-->
+  <!-- End Blog Page Two -->
 {% endblock %}
