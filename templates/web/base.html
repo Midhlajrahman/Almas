@@ -80,8 +80,19 @@
         </svg>
       </a>
     </div>
-
     {% comment %}wa icon end{% endcomment %}
+    <div class="chat-bot-btn" id="chatBotBtn">
+      <img src="{% static 'web/images/icon/live-chat.png' %}" alt="" style="height: 30px; width: 30px;">
+      
+  </div>
+  <iframe
+      src="https://www.chatbase.co/chatbot-iframe/OKWsVSp1ZEKH42V3O_nZ1"
+      width="100%"
+      style="height: 100%; min-height: 700px"
+      frameborder="0"
+      class="chat-bot"
+      id="chatBotIframe"
+  ></iframe>
     {% include 'web/partials/header.html' %}
 
     {% block content %}
@@ -120,5 +131,48 @@
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATY4Rxc8jNvDpsK8ZetC7JyN4PFVYGCGM&amp;callback=initMap"></script>
     <!-- thm custom script -->
     <script src="{% static 'web/js/custom.js' %}"></script>
+    <script>
+      document.getElementById('chatBotBtn').addEventListener('click', function() {
+        var chatBot = document.getElementById('chatBotIframe');
+        if (chatBot.style.display === 'none' || chatBot.style.display === '') {
+            chatBot.style.display = 'block';
+    
+            // Wait for the iframe to load before injecting the button
+            chatBot.onload = function() {
+                var iframeDocument = chatBot.contentDocument || chatBot.contentWindow.document;
+                var cloneBtn = iframeDocument.createElement('button');
+                cloneBtn.innerText = 'Clone';
+                cloneBtn.style.position = 'fixed';
+                cloneBtn.style.bottom = '10px';
+                cloneBtn.style.right = '10px';
+                cloneBtn.style.zIndex = '1000';
+                cloneBtn.addEventListener('click', function() {
+                    cloneChatBot(chatBot);
+                });
+                iframeDocument.body.appendChild(cloneBtn);
+            };
+        } else {
+            chatBot.style.display = 'none';
+        }
+    });
+    
+    function cloneChatBot(originalIframe) {
+        var clonedIframe = originalIframe.cloneNode(true);
+        clonedIframe.style.display = 'block';
+        document.body.appendChild(clonedIframe);
+    }
+    
+    // Close chat bot when clicking outside of it
+    document.addEventListener('click', function(event) {
+        var chatBot = document.getElementById('chatBotIframe');
+        var chatBotBtn = document.getElementById('chatBotBtn');
+    
+        if (chatBot.style.display === 'block' && !chatBot.contains(event.target) && !chatBotBtn.contains(event.target)) {
+            chatBot.style.display = 'none';
+        }
+    });
+    
+    </script>
+   
   </body>
 </html>

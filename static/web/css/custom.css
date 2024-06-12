@@ -163,3 +163,40 @@ section.fact-counter-area.fact-counter-area--style2{
 .mobile-menu .close-btn {
     color: #000000 !important;
 }
+
+.chat-bot {
+    height: 77% !important;
+    position: fixed;
+    right: 0;
+    bottom: 11%;
+    width: 24%;
+    font-size: 14px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    z-index: 20;
+    display: none;
+}
+@media(max-width:991px){
+    .chat-bot{
+        width: 95% !important;
+        min-height: 556px !important;
+    }
+    
+}
+
+.chat-bot-btn {
+    background-color: white;
+    padding: 10px 20px;
+    position: fixed;
+    right: 0;
+    bottom: 91px;
+    font-size: 14px;
+    border-radius: 8px 0 0 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    z-index: 20;
+    cursor: pointer !important; 
+}
